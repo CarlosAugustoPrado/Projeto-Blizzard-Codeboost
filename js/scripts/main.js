@@ -1,10 +1,10 @@
+// Swiper da sessão principal
 var slide_thumbnail = new Swiper(".slide-thumbnail", {
     slidesPerView: 5,
     direction: 'vertical',
     spaceBetween: 20,
     watchSlidesProgress: true
 });
-
 var slide_hero = new Swiper(".slide-principal", {
   effect: 'fade',
   thumbs: {
@@ -16,9 +16,10 @@ var slide_hero = new Swiper(".slide-principal", {
   }
 });
 
+
+//Código dos filtros da sessão de jogos
 const allFilters = document.querySelectorAll('.js-nav-games li a');
 const tabPane = document.querySelectorAll('.tab-pane-games');
-
 
 allFilters.forEach((filter, index) => {
   filter.addEventListener('click', (event) => {
@@ -37,9 +38,10 @@ allFilters.forEach((filter, index) => {
   })
 })
 
+
+// Código do Modal
 const btnOpenModal = document.querySelector('.js-open-modal');
 const btnFecharModal = document.querySelector('.js-close');
-
 
 btnOpenModal.addEventListener('click', (event) => {
   event.preventDefault();
@@ -50,4 +52,35 @@ btnOpenModal.addEventListener('click', (event) => {
 btnFecharModal.addEventListener('click', () => {  
   let tagHtml = document.documentElement;
   tagHtml.classList.remove('show-modal');
+})
+
+
+
+// Código dos dropdowns do menu
+const btnMenu = document.querySelectorAll('.js-btn-menu');
+const menuSite = document.querySelectorAll('.js-menu');
+
+btnMenu.forEach((btn, index) => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault(); 
+
+    menuSite.forEach(itemMenu => {
+      itemMenu.classList.remove('active');
+      itemMenu.addEventListener('mouseleave', () => {
+        itemMenu.classList.remove('active');
+        btnMenu.forEach(itemBtn => {
+          itemBtn.classList.remove('active');
+        })
+        
+      })
+    })
+
+    btnMenu.forEach(itemBtn => {
+      itemBtn.classList.remove('active');
+    })
+    
+    btn.classList.add('active');
+    menuSite[index].classList.add('active');
+    
+  })
 })
