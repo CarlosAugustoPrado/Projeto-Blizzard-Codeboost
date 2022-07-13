@@ -11,9 +11,11 @@
         }
         &.slide-02 {
           background: url("../img/banner-slide-02.png") no-repeat center center;
+          background-size: cover;
         }
         &.slide-03 {
           background: url("../img/banner-slide-03.jpg") no-repeat center center;
+          background-size: cover;
           .left-content {
             max-width: 62.6rem;
           }
@@ -257,6 +259,102 @@
       }
     }
   }
+}
+
+.s-download {
+  width: 100%;
+  height: 85.2rem;
+  background: url('../img/bg-download.png') no-repeat center center;
+  overflow: hidden;
+  background-size: cover;
+  .container {
+    position: relative;
+  }
+  .text-left {
+    width: 100%;
+    max-width: 39.3rem;
+    padding-top: 13.2rem;
+    .logo {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 3.2rem;
+      line-height: 110.2%;
+      color: #FFFFFF;
+      margin-bottom: 3rem;
+    }
+    ul {
+      margin-bottom: 4.2rem;
+      li {
+        display: flex;
+        align-items: center;
+        &:not(:last-child){
+          margin-bottom: 2.4rem;
+        }
+        .icon {
+          width: 1.8rem;
+          height: 1.8rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 1.6rem;
+        }
+        p {
+          font-size: 1.8rem;
+          line-height: 178.2%; 
+          color: #828792
+        }
+      }
+    }
+    .btn {
+      padding: 0px 4rem;
+      line-height: 5.2rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 4.9rem;
+    }
+    .app {
+      display: flex;
+      align-items: center;
+      p {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        color: #E5E5E5;
+        max-width: 23.9rem;
+        margin-left: 1.8rem;
+        a {
+          text-decoration: underline;
+          transition: color .3s;
+          &:hover {
+            color: $primary-light;
+          }
+        }
+      }
+    }
+  }
+  .image {
+    position: absolute;
+    top: 9.9rem;
+    right: -23rem;    
+    width: 100%;
+    max-width: 106.6rem;
+    height: 61rem;
+    .img-lg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: float 8s ease-in-out infinite;
+    }
+    .img-sm {
+      position: absolute;
+      right: 21rem;
+      bottom: -2.8rem;
+      animation: float 6s ease-in-out infinite;
+    }
+  }
+
 }
 
 @keyframes fadeUp {
