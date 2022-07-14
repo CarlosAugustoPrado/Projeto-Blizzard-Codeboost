@@ -1,6 +1,7 @@
 .s-hero {
   position: relative;
   z-index: 2;
+  display: none;
   .slide-principal {
     width: 100%;
     height: 73.6rem;
@@ -155,6 +156,7 @@
 .s-games {
   padding-top: 8.3rem;
   padding-bottom: 11rem;
+  display: none;
   .top {
     display: flex;
     align-items: flex-end;
@@ -268,6 +270,7 @@
   background: url('../img/bg-download.png') no-repeat center center;
   overflow: hidden;
   background-size: cover;
+  display: none;
   .container {
     position: relative;
   }
