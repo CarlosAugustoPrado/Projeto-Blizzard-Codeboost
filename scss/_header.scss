@@ -91,6 +91,7 @@ header {
       }
     }
     .right-container {
+      margin-right: 15px;
       .btn {
         display: none;
       }
@@ -198,8 +199,48 @@ header {
     }
   }
   
+  @media (max-width: 1200px) {
+    .area-menu {
+      ul {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.8rem 11.2rem;
+        li {
+          a {
+            width: 18.6rem;
+          }
+        }
+      }
+    }
+    &.esportes {
+      .area-menu {
+        ul {
+          li {
+            a {
+              .icon {
+                width: 12rem;
+                height: 13rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .area-menu {
+      ul {
+        li {
+          a {
+            width: 15.6rem;
+          }
+        }
+      }
+    }
+  }
   @media (max-width: 560px) {
     display: none;
   }
+  
 }
+
 

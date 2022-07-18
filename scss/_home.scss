@@ -437,6 +437,7 @@
           grid-gap: 2.4rem 1.6rem;
         }
         .card-all-games {
+          max-width: 15rem;
           height: 21.4rem;
           img {
             max-width: 6.9rem;
@@ -584,8 +585,9 @@
       top: 0;
       right: 0;
       height: 27rem;
+      right: 1.2rem;
       .img-sm {
-        right: 0;
+        right: 0rem;
         max-width: 27.6rem;
         bottom: 0;
       }
@@ -738,6 +740,12 @@
           color: rgb(72, 241, 233);
         }
       }
+    }
+  }
+  @media (max-width: 800px) {
+    .box {
+      max-width: 65.6rem;
+      height: 53rem;
     }
   }
 }
