@@ -114,19 +114,33 @@ btnMenu.forEach((btn, index) => {
 
 // Código do menu mobile 
 
-const btnMenuMobile = document.querySelector('.btn-mobile');
+const menuHamburguer = document.querySelector('.js-btn-mobile');
 const menuMobile = document.querySelector('.js-menu-mobile');
-const closeMenuMobile = document.querySelector('.js-close-mobile')
+const closeMenuHamburguer = document.querySelector('.js-close-mobile');
 
-function openMenuMobile() {  
-  menuMobile.classList.add('active');  
+
+function openMenuMobile() {
+  menuMobile.classList.add('active');
 }
-function fecharMenuMobile () {
+function closeMenuMobile() {
   menuMobile.classList.remove('active');
 }
-btnMenuMobile.addEventListener('click', openMenuMobile);
-closeMenuMobile.addEventListener('click', fecharMenuMobile);
+
+menuHamburguer.addEventListener('click', openMenuMobile);
+closeMenuHamburguer.addEventListener('click', closeMenuMobile);
 
 
+const btnOpenModalMobile = document.querySelector('.js-open-modal-mobile');
+const btnFecharModalMobile = document.querySelector('.js-close-mobile');
 
+btnOpenModalMobile.addEventListener('click', (event) => {
+  event.preventDefault();
+  let tagHtml = document.documentElement;
+  tagHtml.classList.add('show-modal');
+})
+
+btnFecharModalMobile.addEventListener('click', () => {  
+  let tagHtml = document.documentElement;
+  tagHtml.classList.remove('show-modal');
+})
 
