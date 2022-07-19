@@ -112,3 +112,21 @@ btnMenu.forEach((btn, index) => {
 })
 
 
+// Código do menu mobile 
+
+const btnMenuMobile = document.querySelector('.btn-mobile');
+const menuMobile = document.querySelector('.js-menu-mobile');
+const closeMenuMobile = document.querySelector('.js-close-mobile')
+
+function openMenuMobile() {  
+  menuMobile.classList.add('active');  
+}
+function fecharMenuMobile () {
+  menuMobile.classList.remove('active');
+}
+btnMenuMobile.addEventListener('click', openMenuMobile);
+closeMenuMobile.addEventListener('click', fecharMenuMobile);
+
+
+
+

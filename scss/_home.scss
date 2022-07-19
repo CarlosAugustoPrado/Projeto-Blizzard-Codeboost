@@ -1,3 +1,5 @@
+
+
 .s-hero {
   position: relative;
   z-index: 2;
@@ -746,6 +748,15 @@
     .box {
       max-width: 65.6rem;
       height: 53rem;
+    }
+  }
+  @media (max-width: 560px) {
+    .box {
+      max-width: 35.6rem;
+      height: 51rem;
+      form {
+        max-width: 30.6rem;
+      }
     }
   }
 }
