@@ -195,7 +195,11 @@
       }
     }
   }
-  
+  @media (max-width: 1500px) {
+    .slide-thumbnail {
+      left: 4%;
+    }
+  }
   @media (max-width: 1200px) {
     .slide-thumbnail {
       left: 1%;
@@ -606,6 +610,13 @@
       transform: translateY(0);
     }
   }
+  @media (max-width: 800px) {
+    .modal {
+      .box {
+        transform: translateY(-20%);
+      }
+    }
+  }
 }
 
 .modal {
@@ -747,7 +758,7 @@
   @media (max-width: 800px) {
     .box {
       max-width: 65.6rem;
-      height: 53rem;
+      height: 53rem;      
     }
   }
   @media (max-width: 560px) {
